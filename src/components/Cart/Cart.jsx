@@ -17,8 +17,8 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const Remove = (id) => {
-    dispatch(RemoveItem({ id }));
+  const Remove = (index) => {
+    dispatch(RemoveItem({ id: index }));
   };
 
   const increaseQuantity = (index) => {

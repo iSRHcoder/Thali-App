@@ -19,7 +19,8 @@ export const thaliSlice = createSlice({
       }
     },
     RemoveItem: (state, action) => {
-      state.thali.splice(action.payload, 1);
+      const indexToRemove = action.payload.id;
+      state.thali.splice(indexToRemove, 1);
     },
     IncreaseQuantity: (state, action) => {
       const index = action.payload;
