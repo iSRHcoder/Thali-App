@@ -3,7 +3,7 @@
 }
 
 .home {
-  background-image: url("public/imagesAndSvgs/pexels-chan-walrus-958545.jpg");
+  background-image: url("/imagesAndSvgs/pexels-chan-walrus-958545.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
