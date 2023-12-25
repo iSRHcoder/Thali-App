@@ -1,0 +1,25 @@
+.AppFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #0d6efd;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .AppFooter {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .AppFooter {
+    font-size: 0.8rem;
+  }
+}

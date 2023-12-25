@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+.home {
+  background-image: url("public/imagesAndSvgs/pexels-chan-walrus-958545.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.home h1 {
+  color: #0d6efd;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 70px;
+  padding-top: 100px;
+  z-index: 1;
+}
+
+.home h2 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  z-index: 1;
+}
+
+.icons :hover {
+  padding: 8px;
+  background-color: aquamarine;
+  border-radius: 50%;
+}

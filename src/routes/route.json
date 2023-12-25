@@ -1,0 +1,11 @@
+{
+  "HOME": "/",
+  "MENU": "menu",
+  "CART": "cart",
+  "LOGIN": "login",
+  "SIGNUP": "signup",
+  "CHECKOUT": "checkout",
+  "SUPPORT": "support",
+  "CONTACT_US": "contact-us",
+  "LOGIN_ERROR": "login-error"
+}
