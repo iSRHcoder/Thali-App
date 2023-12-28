@@ -15,14 +15,18 @@ const Home = () => {
           Point
         </span>
       </h1>
-      <h2>Explore a best food from our menu</h2>
-      <Button
-        onClick={() => {
-          navigate("/Menu");
-        }}
-      >
-        Our Menu
-      </Button>
+      <div className="d-inline-block">
+        <h2 style={{ backgroundColor: "grey" }}>
+          Explore a best food from our menu
+        </h2>
+        <Button
+          onClick={() => {
+            navigate("/Menu");
+          }}
+        >
+          Our Menu
+        </Button>
+      </div>
     </div>
   );
 };
