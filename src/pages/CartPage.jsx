@@ -7,7 +7,11 @@ const CartPage = () => {
   const { isAuth } = useContext(AuthContext);
   return (
     <>
-      {isAuth && <Cart />}
+      {isAuth && (
+        <div className="m-auto">
+          <Cart />
+        </div>
+      )}
       {!isAuth && <Navigate to={"/login-error"} />}
     </>
   );

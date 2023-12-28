@@ -61,4 +61,8 @@
   .ms-1 {
     margin-top: 5px; /* Add some spacing between buttons in mobile view */
   }
+  .sunil {
+    margin: auto;
+    margin-left: -10px;
+  }
 }
