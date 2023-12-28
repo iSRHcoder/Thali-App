@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import ModalPopup from "../ModalPopup/ModalPopup";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import {
   IncreaseQuantity,
   RemoveItem,
   clearThali,
-} from "../Thali/thaliSlice";
+} from "../Thali/ThaliSlice";
 
 const Cart = () => {
   const [isModalShow, setIsModalShow] = useState(false);
@@ -54,33 +54,33 @@ const Cart = () => {
   }
 
   return (
-    <div className="container m-5">
-      <div className="d-flex justify-content-between mt-2 mb-2">
+    <div className="m-5">
+      <div className="mt-2 mb-2 d-flex justify-content-between">
         <h1 className="text-danger">Your Food</h1>
         <div>
-          <button className="btn btn-success" onClick={order}>
+          <Button className="btn btn-success" onClick={order}>
             Order Now <span className="text-warning"> ₹{sum}</span>
-          </button>
+          </Button>
         </div>
       </div>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <Row>
         {thali.map((ele, index) => (
-          <div className="col mb-3" key={index}>
+          <Col key={index} xs={12} md={6} lg={4} className="mb-3 my-3">
             <div className="card">
               <img
                 src={ele.image}
                 className="card-img-top"
                 alt="foodImage"
                 width="100%"
-                height="200"
+                height="200px"
               />
               <div className="card-body">
                 <h3 className="card-title">{ele.name}</h3>
-                <div className="d-flex justify-content-between m-2">
+                <div className="d-flex justify-content-around m-2">
                   <p>Price: ₹{ele.price}</p>
                   <p>TotalPrice: ₹{+ele.price * ele.quantity} </p>
                 </div>
-                <div className="d-flex justify-content-between mt-2">
+                <div className="d-flex justify-content-around mt-2 mb-2">
                   <p className="card-text">
                     Quantity:
                     <Button
@@ -107,15 +107,15 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Col>
         ))}
-      </div>
 
-      {thali.length === 0 && (
-        <div className="text-center mt-3">
-          <h3>Add at least 1 Food Item to your Thali</h3>
-        </div>
-      )}
+        {thali.length === 0 && (
+          <div className="col-12">
+            <h3>Add at least 1 Food Item to your Thali</h3>
+          </div>
+        )}
+      </Row>
 
       <ModalPopup
         show={isModalShow}
