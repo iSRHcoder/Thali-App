@@ -35,7 +35,6 @@
   border-radius: 50%;
 }
 
-/* Default styles for larger screens */
 .d-flex {
   display: flex;
   justify-content: around;
@@ -51,15 +50,15 @@
 /* Styles for mobile screens */
 @media (max-width: 424px) {
   .d-flex {
-    flex-direction: column; /* Change to a column layout on smaller screens */
+    flex-direction: column;
   }
 
   .card-text {
-    flex-direction: column; /* Change to a column layout for the card-text */
+    flex-direction: column;
   }
 
   .ms-1 {
-    margin-top: 5px; /* Add some spacing between buttons in mobile view */
+    margin-top: 5px;
   }
   .sunil {
     margin: auto;
