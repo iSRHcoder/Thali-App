@@ -34,3 +34,31 @@
   background-color: aquamarine;
   border-radius: 50%;
 }
+
+/* Default styles for larger screens */
+.d-flex {
+  display: flex;
+  justify-content: around;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.card-text {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for mobile screens */
+@media (max-width: 424px) {
+  .d-flex {
+    flex-direction: column; /* Change to a column layout on smaller screens */
+  }
+
+  .card-text {
+    flex-direction: column; /* Change to a column layout for the card-text */
+  }
+
+  .ms-1 {
+    margin-top: 5px; /* Add some spacing between buttons in mobile view */
+  }
+}

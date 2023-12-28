@@ -65,7 +65,7 @@ const Cart = () => {
       </div>
       <Row>
         {thali.map((ele, index) => (
-          <Col key={index} xs={12} md={6} lg={4} className="mb-3 my-3">
+          <Col key={index} xs={12} md={6} lg={4} className="mb-3  ">
             <div className="card">
               <img
                 src={ele.image}
@@ -77,25 +77,27 @@ const Cart = () => {
               <div className="card-body">
                 <h3 className="card-title">{ele.name}</h3>
                 <div className="d-flex justify-content-around m-2">
-                  <p>Price: ₹{ele.price}</p>
-                  <p>TotalPrice: ₹{+ele.price * ele.quantity} </p>
+                  <span>Price: ₹{ele.price}</span>
+                  <span>TotalPrice: ₹{+ele.price * ele.quantity} </span>
                 </div>
                 <div className="d-flex justify-content-around mt-2 mb-2">
                   <p className="card-text">
-                    Quantity:
-                    <Button
-                      className="ms-1"
-                      onClick={() => decreaseQuantity(index)}
-                    >
-                      -
-                    </Button>
-                    <strong> 0{ele.quantity}</strong>
-                    <Button
-                      className="ms-1"
-                      onClick={() => increaseQuantity(index)}
-                    >
-                      +
-                    </Button>
+                    <span>Quantity:</span>
+                    <span>
+                      <Button
+                        className="ms-1"
+                        onClick={() => decreaseQuantity(index)}
+                      >
+                        -
+                      </Button>
+                      <strong> 0{ele.quantity}</strong>
+                      <Button
+                        className="ms-1"
+                        onClick={() => increaseQuantity(index)}
+                      >
+                        +
+                      </Button>
+                    </span>
                   </p>
                   <Button
                     variant="warning"
