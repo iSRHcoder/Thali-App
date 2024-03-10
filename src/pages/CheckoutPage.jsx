@@ -42,8 +42,12 @@ const CheckoutPage = () => {
   return isAuth ? (
     <>
       <div style={containerStyle}>
-        <h3>Your Thali order is placed successfully</h3>
-        <h6>You will receive your order in 10-20 min</h6>
+        <h3 style={{ color: "gray" }}>
+          Your Thali order is placed successfully
+        </h3>
+        <h6 style={{ color: "gray" }}>
+          You will receive your order in 10-20 min
+        </h6>
         <h2 style={greetingStyle}>HAPPY EATING</h2>
         <h3 style={greetingStyle}>ORDER AGAIN...!</h3>
       </div>
