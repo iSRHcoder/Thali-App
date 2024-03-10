@@ -8,7 +8,7 @@ import {
   IncreaseQuantity,
   RemoveItem,
   clearThali,
-} from "../Thali/ThaliSlice";
+} from "../Thali/thaliSlice";
 
 const Cart = () => {
   const [isModalShow, setIsModalShow] = useState(false);
